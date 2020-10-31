@@ -5,7 +5,7 @@ Created on Fri Oct 30 06:27:03 2020
 @author: Usuario
 """
 
-import mcd 
+import mcd
 
 class Fraccion:
 
@@ -13,7 +13,7 @@ class Fraccion:
     g=mcd.MCD(num,den)
     self.numerador=num/g
     self.denominador=den/g
- 
+
 
   def __add__(self,other):
     if isinstance(other,Fraccion):
@@ -42,7 +42,7 @@ class Fraccion:
   def __neg__(self):
       return Fraccion(-self.numerador,self.denominador)
 
-  
+
   def __mul__(self,other):
     if isinstance(other,Fraccion):
       return Fraccion((self.numerador*other.numerador),(self.denominador*other.denominador))
@@ -53,7 +53,7 @@ class Fraccion:
     else: return NotImplemented
   def __rmul__(self, other):
     return self*other
-  
+
 
   def __truediv__(self,other):
     if isinstance(other,Fraccion):
@@ -73,3 +73,6 @@ class Fraccion:
 
   def __str__(self):
     return "{:.1f}/{:.1f}".format(self.numerador,self.denominador)
+
+
+print("hola")
